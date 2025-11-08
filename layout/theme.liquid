@@ -55,6 +55,16 @@
 
     {{ content_for_header }}
 
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"Organization",
+        "name":"أرخص فيب",
+        "url":"{{ shop.url }}",
+        "logo":"{{ settings.logo | img_url: '400x' | prepend: 'https:' }}"
+      }
+    </script>
+
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
