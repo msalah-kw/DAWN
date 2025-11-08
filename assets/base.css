@@ -1,4 +1,7 @@
 :root {
+  --arkhasvape-primary: #e10600;
+  --arkhasvape-secondary: #ffd100;
+  --arkhasvape-text: #121212;
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
@@ -3596,30 +3599,42 @@ details-disclosure > details {
   }
 }
 body {
-  font-family: 'Tajawal', 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #121212;
+  color: var(--arkhasvape-text);
+  font-family: 'Poppins', 'Tajawal', var(--font-body-family, sans-serif);
 }
 
-h1, h2, h3 {
-  font-family: 'Tajawal', sans-serif;
-  font-weight: 700;
-  color: #E10600;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', 'Tajawal', var(--font-heading-family, sans-serif);
+  color: var(--arkhasvape-primary);
 }
 
-h1 { font-size: 36px; }
-h2 { font-size: 28px; }
-h3 { font-size: 22px; }
-
-button, .btn {
-  font-weight: 600;
-  font-size: 15px;
+button,
+.button,
+.btn {
+  font-family: 'Poppins', 'Tajawal', var(--font-body-family, sans-serif);
 }
 
-/* تفعيل الاتجاه العربي */
-html[lang="ar"] body {
+body :lang(ar),
+:lang(ar) {
+  font-family: 'Tajawal', 'Poppins', var(--font-body-family, sans-serif);
+}
+
+html[lang="ar"] {
   direction: rtl;
+}
+
+html[lang="ar"] body {
   text-align: right;
-  font-family: 'Tajawal', 'Poppins', sans-serif;
+  font-family: 'Tajawal', 'Poppins', var(--font-body-family, sans-serif);
+}
+
+html[lang="ar"] body :lang(en) {
+  font-family: 'Poppins', 'Tajawal', var(--font-body-family, sans-serif);
 }
