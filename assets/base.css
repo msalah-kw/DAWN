@@ -3678,6 +3678,8 @@ h1,h2,h3{font-family:'Tajawal',sans-serif;font-weight:700;color:var(--brand-prim
 html[lang="ar"] body{direction:rtl;text-align:right;}
 .announcement-bar{background:#E10600;color:#fff}
 .announcement-bar a{color:#fff;text-decoration:none}
+.card__media img{object-fit:cover}
+.card-wrapper{border-radius:14px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,.06)}
 @media(min-width:990px){
   .header{display:flex;align-items:center}
   .header__heading{flex:0 0 150px}
