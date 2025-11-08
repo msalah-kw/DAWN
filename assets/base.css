@@ -3678,6 +3678,8 @@ h1,h2,h3{font-family:'Tajawal',sans-serif;font-weight:700;color:var(--brand-prim
 html[lang="ar"] body{direction:rtl;text-align:right;}
 .announcement-bar{background:#E10600;color:#fff}
 .announcement-bar a{color:#fff;text-decoration:none}
+.button--primary{background:var(--brand-primary,#E10600)!important;color:#fff!important}
+.button--secondary{background:#fff;border:2px solid var(--brand-primary,#E10600);color:var(--brand-primary,#E10600)}
 .card__media img{object-fit:cover}
 .card-wrapper{border-radius:14px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,.06)}
 @media(min-width:990px){
