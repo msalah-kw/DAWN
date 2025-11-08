@@ -7,6 +7,20 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+    >
+
+    <style>
+      :root{
+        --brand-primary: {{ settings.brand_primary | default: '#E10600' }};
+        --brand-accent: {{ settings.brand_accent | default: '#FFD100' }};
+      }
+    </style>
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -40,6 +54,16 @@
     {%- endif -%}
 
     {{ content_for_header }}
+
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"Organization",
+        "name":"أرخص فيب",
+        "url":"{{ shop.url }}",
+        "logo":"{{ settings.logo | img_url: '400x' | prepend: 'https:' }}"
+      }
+    </script>
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
